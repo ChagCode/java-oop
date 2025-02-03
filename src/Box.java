@@ -3,6 +3,14 @@ public class Box {
   double length;
   double width;
   double height;
+
+  void setDimens(double length, double width, double height) {
+    // обращаемся к переменной экземпляра через this
+    this.length = length;
+    this.width = width;
+    this.height = height;
+  }
+
   double getVolume() {
     return length * width * height;
   }

@@ -3,16 +3,18 @@ public class Main {
   public static void main(String[] args) {
     System.out.println("------------------------ Задача 1 ----------------------------");
     Box box1 = new Box(); // переменная box1 ссылается на объект Box()
-    box1.length = 10;
-    box1.height = 10;
-    box1.width = 10;
+//    box1.length = 10;
+//    box1.height = 10;
+//    box1.width = 10;
+    box1.setDimens(10, 10, 10);
     double volume1 = box1.getVolume();
     System.out.println(volume1);
     box1.showVolume();
     Box box2 = new Box();
-    box2.length = 20;
-    box2.height = 20;
-    box2.width = 20;
+//    box2.length = 20;
+//    box2.height = 20;
+//    box2.width = 20;
+    box2.setDimens(20, 20, 20);
     double volume2 = box2.getVolume();
     System.out.println(volume2);
     box2.showVolume();
@@ -46,5 +48,15 @@ public class Main {
     dog.speed = 7;
     System.out.println(dog.getInfo());
     dog.run();
+    System.out.println();
+
+    System.out.println("------------------------ Задача 4 ----------------------------");
+    Rectangle rectangle = new Rectangle();
+    rectangle.setDimends(4, 5);
+    System.out.println("Площать прямоугольника = " + rectangle.square());
+
+    System.out.println("------------------------ Задача 5 ----------------------------");
+    Worker nick = new Worker("Nick", "driver", 10_000);
+    nick.getInfo();
   }
 }
