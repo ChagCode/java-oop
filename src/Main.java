@@ -58,5 +58,27 @@ public class Main {
     System.out.println("------------------------ Задача 5 ----------------------------");
     Worker nick = new Worker("Nick", "driver", 10_000);
     nick.getInfo();
+
+    System.out.println("------------------------ Задача 6 ----------------------------");
+//    MyMath math = new MyMath();
+//    System.out.println(math.multiple(20));
+//    System.out.println(math.multiple(20, 5));
+//    System.out.println(math.multiple(0.1, 102));
+    // если static, то без использования объекта и вызываем функцию напрямую
+    System.out.println(MyMath.multiple(20));
+    System.out.println(MyMath.multiple(20, 5));
+    System.out.println(MyMath.multiple(0.1, 102));
+
+    System.out.println("------------------------ Задача 7 ----------------------------");
+    Monster monster = new Monster(5);
+    monster.voice();
+    monster.voice(3, "Aaaaaa");
+
+    System.out.println("------------------------ Задача 8 ----------------------------");
+    Box another = new Box(50);
+    Box current = new Box(51);
+    int compare = current.compare(another);
+    System.out.println(compare);
+
   }
 }
