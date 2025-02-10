@@ -1,3 +1,5 @@
+import test.MyArrayList;
+
 public class Main {
   // object - экземпляр класса
   public static void main(String[] args) {
@@ -20,24 +22,20 @@ public class Main {
     box2.showVolume();
 
     System.out.println("------------------------ Задача 2 ----------------------------");
-    Person person1 = new Person();
-    person1.name = "Ivan";
-    person1.age = 49;
-    person1.weight = 98.8;
-    Person person2 = new Person();
-    person2.name = "Andrey";
-    person2.age = 21;
-    person2.weight = 83.2;
-    Person person3 = new Person();
-    person3.name = "Mariy";
-    person3.age = 25;
-    person3.weight = 50;
-    double sumWeight = person1.weight + person2.weight + person3.weight;
-    double sumAge = person1.age + person2.age + person3.age;
-    double avgWeight = sumWeight / 3;
-    double avgAge = sumAge / 3;
-    System.out.println("Средний вес -> " + avgWeight);
-    System.out.println("Средний возраст -> " + avgAge);
+//    examples.Person person1 = new examples.Person();
+//    person1.name = "Ivan";
+//    person1.age = 49;
+//
+//    examples.Person person2 = new examples.Person();
+//    person2.name = "Andrey";
+//    person2.age = 21;
+//
+//    examples.Person person3 = new examples.Person();
+//    person3.name = "Mariy";
+//    person3.age = 25;
+//    double sumAge = person1.age + person2.age + person3.age;
+//    double avgAge = sumAge / 3;
+//    System.out.println("Средний возраст -> " + avgAge);
 
     System.out.println("------------------------ Задача 3 ----------------------------");
 
@@ -76,9 +74,21 @@ public class Main {
 
     System.out.println("------------------------ Задача 8 ----------------------------");
     Box another = new Box(50);
-    Box current = new Box(51);
+    Box current = new Box(10);
+    // создадим копию объекта
+    Box another2 = new Box(another);
+    another2.setDimens(2, 2, 2);
     int compare = current.compare(another);
     System.out.println(compare);
+    System.out.println(another2.getVolume());
+    // создадим копию объекта возвращаемую return
+    Box copyCurrent = current.copy();
+    System.out.println(copyCurrent.getVolume());
+    // создадим копию в 2 раза больше
+    Box doubleCurrent = current.dblCopy();
+    System.out.println(doubleCurrent.getVolume());
+
+
 
   }
 }
