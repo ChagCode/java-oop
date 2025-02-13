@@ -10,4 +10,5 @@ public class Cat extends CatFamily {
     super.eat();
     System.out.println("вискас!");
   }
+
 }

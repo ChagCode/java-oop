@@ -1,10 +1,13 @@
-import test.MyArrayList;
+import examples.Box;
+import examples.WeightBox;
+import inheritance.Rectangle;
+import inheritance.Triangle;
 
 public class Main {
   // object - экземпляр класса
   public static void main(String[] args) {
     System.out.println("------------------------ Задача 1 ----------------------------");
-    Box box1 = new Box(); // переменная box1 ссылается на объект Box()
+    Box box1 = new Box(); // переменная box1 ссылается на объект examples.Box()
 //    box1.length = 10;
 //    box1.height = 10;
 //    box1.width = 10;
@@ -49,7 +52,7 @@ public class Main {
     System.out.println();
 
     System.out.println("------------------------ Задача 4 ----------------------------");
-    Rectangle rectangle = new Rectangle();
+    Rect rectangle = new Rect();
     rectangle.setDimends(4, 5);
     System.out.println("Площать прямоугольника = " + rectangle.square());
 
@@ -87,6 +90,37 @@ public class Main {
     // создадим копию в 2 раза больше
     Box doubleCurrent = current.dblCopy();
     System.out.println(doubleCurrent.getVolume());
+
+    System.out.println("------------------------ Задача 9 ----------------------------");
+
+    Box box = new Box(10);
+    WeightBox weightBox = new WeightBox();
+    box.showInfo();
+    weightBox.showInfo();
+
+    System.out.println("------------------------ Задача 10 ----------------------------");
+
+    Triangle tran = new Triangle(5, 5, 9);
+    Rectangle rect = new Rectangle(10, 10);
+    System.out.println(tran.getPerimeter());
+    System.out.println(rect.getPerimeter());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

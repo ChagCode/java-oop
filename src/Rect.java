@@ -1,4 +1,4 @@
-public class Rectangle {
+public class Rect {
   double length;
   double width;
 
@@ -10,4 +10,5 @@ public class Rectangle {
   double square() {
     return length * width;
   }
+
 }

@@ -1,3 +1,5 @@
+package examples;
+
 public class Box {
   // class - шаблон, на который ссылается объет
   private double length;
@@ -82,4 +84,9 @@ public class Box {
       return 0;
     }
   }
+
+  public void showInfo() {
+    System.out.println("length " + length + " width " + width + " height " + height);
+  }
+
 }
