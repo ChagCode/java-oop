@@ -33,11 +33,11 @@ public class Main {
     animals2.add(dog);
     animals2.add(cat);
     animals2.add(bird);
-//    animals2.add(bird); птица не реализует методы AbleToRun
+//    animals2.add(fish); рыба не реализует методы AbleToRun
     for (AbleToRun anim : animals2) {
       anim.run();
     }
-    bird.fly(); // на выбор???
+    // птицу приводим к типу способной летать
     AbleToFly ableToFly = new Bird();
     ableToFly.fly();
 
@@ -45,6 +45,7 @@ public class Main {
 
     Cook cook = new Cook();
     Director dir = new Director();
+
     Programmer prog = new Programmer();
     ArrayList<Worker> workers = new ArrayList<>();
     ArrayList<Driver> drivers = new ArrayList<>();
@@ -64,7 +65,24 @@ public class Main {
       driver.drive();
     }
 
+    System.out.println("-------------------------------------");
 
+    dir.giveMany(new Salary() {
+      @Override
+      public void giveSalary() {
+        System.out.println("Вот твоя ЗП");
+      }
+    });
+
+    System.out.println("-------------------------------------");
+
+    Client client = new Client();
+    client.toOrder(new Waiter() {
+      @Override
+      public void bringOrder(String dish) {
+        System.out.println("Я принес вам: " + dish);
+      }
+    }, "Рыба");
 
 
   }
